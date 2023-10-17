@@ -1,0 +1,17 @@
+{
+    "name": "mgr/clickengine",
+    "description": "Test task",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maxim Grishin"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
