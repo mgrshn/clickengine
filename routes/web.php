@@ -1,31 +1,20 @@
 <?php
 
-use App\Router\Route;
+use App\Controllers\RegisterController;
+use App\Controllers\LoginController;
+use App\Controllers\HomeController;
+use App\Kernel\Router\Route;
 
-Route::get('/', function () {
-    require_once "views/login.php";
-});
+Route::get('/', [LoginController::class, 'index']);
 
-Route::get('/test2', function () {
-    print_r('im working2');
-});
+Route::get('/home', [HomeController::class, 'index']);
 
-Route::get('/test3', function () {
-    print_r('get working3');
-});
+Route::get('/register', [RegisterController::class, 'index']);
 
-Route::post('/test3', function () {
-    print_r('post working3');
-});
+Route::post('/register', [RegisterController::class, 'register']);
 
-Route::get('/register', function() {
-    require_once "views/register.php";
-});
+Route::get('/login', [LoginController::class, 'index']);
 
-Route::get('/login', function() {
-    require_once "views/login.php";
-});
+Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/home', function() {
-    require_once "views/home.php";
-});
+Route::post('/logout', [LoginController::class, 'logout']);

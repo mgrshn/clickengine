@@ -7,11 +7,16 @@
             "App\\": "app/"
         }
     },
+    "require": {
+        "php": "^8.2"
+      },
     "authors": [
         {
             "name": "Maxim Grishin"
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require-dev": {
+        "symfony/var-dumper": "^6.3"
+    }
 }
