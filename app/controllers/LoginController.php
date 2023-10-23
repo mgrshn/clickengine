@@ -8,7 +8,7 @@ class LoginController extends Controller
 {
     public function index(): void
     {
-        $authenticated = $this->session()->has('user_id');
+        $authenticated = $this->auth()->check();
         if ($authenticated) {
             $this->response()->withRedirect('home');
         }

@@ -35,4 +35,13 @@ class Auth implements AuthInterface
     {
         $this->session->destroy();
     }
+
+    public function check(): bool
+    {
+        $authenticated = $this->session->has('user_id');
+        if (!$authenticated) {
+            return false;
+        }
+        return true;
+    }
 }

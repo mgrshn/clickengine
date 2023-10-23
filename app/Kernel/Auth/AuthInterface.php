@@ -8,4 +8,5 @@ interface AuthInterface
 
     public function logout(): void;
 
+    public function check(): bool;
 }
